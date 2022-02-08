@@ -1,0 +1,20 @@
+a.link(href="#") some link
+mixin Link
+	a.link(href="#") Mixin!
+
+mixin Linka(message, link= '#')
+	a.link(href= link)= message
+
+mixin Linka2(title, descr, link, linkText)
+	.card
+		h1.card_title= title
+		p.card_description= descr
+		a.link(href= link)= linkText
+
+mixin Linka3(title, descr, link, linkText, cls)
+	.card(class= cls)
+		h1.card_title= title
+		p.card_description= descr
+		a.link(href= link)= linkText
+		+Linka('*', 'M')
+		
